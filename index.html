@@ -26,18 +26,7 @@
             var contract = null;
             const ABI = [
 	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "baseURI_",
-				"type": "string"
-			},
-			{
-				"internalType": "address",
-				"name": "_layerZeroEndpoint",
-				"type": "address"
-			}
-		],
+		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
@@ -110,113 +99,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "donate",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint16",
-				"name": "_srcChainId",
-				"type": "uint16"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_srcAddress",
-				"type": "bytes"
-			},
-			{
-				"internalType": "uint64",
-				"name": "_nonce",
-				"type": "uint64"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_payload",
-				"type": "bytes"
-			}
-		],
-		"name": "lzReceive",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint16",
-				"name": "_srcChainId",
-				"type": "uint16"
-			},
-			{
-				"indexed": false,
-				"internalType": "bytes",
-				"name": "_srcAddress",
-				"type": "bytes"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint64",
-				"name": "_nonce",
-				"type": "uint64"
-			},
-			{
-				"indexed": false,
-				"internalType": "bytes",
-				"name": "_payload",
-				"type": "bytes"
-			}
-		],
-		"name": "MessageFailed",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint8",
-				"name": "numTokens",
-				"type": "uint8"
-			}
-		],
-		"name": "mint",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint16",
-				"name": "_srcChainId",
-				"type": "uint16"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_srcAddress",
-				"type": "bytes"
-			},
-			{
-				"internalType": "uint64",
-				"name": "_nonce",
-				"type": "uint64"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_payload",
-				"type": "bytes"
-			}
-		],
-		"name": "onLzReceive",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -245,27 +127,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "uint16",
-				"name": "_srcChainId",
-				"type": "uint16"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_srcAddress",
-				"type": "bytes"
-			},
-			{
-				"internalType": "uint64",
-				"name": "_nonce",
-				"type": "uint64"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_payload",
-				"type": "bytes"
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
 			}
 		],
-		"name": "retryMessage",
+		"name": "safeMint",
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
@@ -340,50 +207,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "URI",
-				"type": "string"
-			}
-		],
-		"name": "setBaseURI",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "newVal",
-				"type": "uint256"
-			}
-		],
-		"name": "setGasForDestinationLzReceive",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint16",
-				"name": "_chainId",
-				"type": "uint16"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_trustedRemote",
-				"type": "bytes"
-			}
-		],
-		"name": "setTrustedRemote",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -445,47 +268,10 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint16",
-				"name": "_chainId",
-				"type": "uint16"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "traverseChains",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "amt",
-				"type": "uint256"
-			}
-		],
+		"inputs": [],
 		"name": "withdraw",
 		"outputs": [],
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "_owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -502,40 +288,6 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint16",
-				"name": "",
-				"type": "uint16"
-			},
-			{
-				"internalType": "bytes",
-				"name": "",
-				"type": "bytes"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "failedMessages",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "payloadLength",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bytes32",
-				"name": "payloadHash",
-				"type": "bytes32"
 			}
 		],
 		"stateMutability": "view",
@@ -579,6 +331,32 @@
 				"internalType": "bool",
 				"name": "",
 				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_SUPPLY",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "mintRate",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -665,6 +443,49 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenOfOwnerByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "tokenId",
 				"type": "uint256"
 			}
@@ -681,26 +502,20 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint16",
-				"name": "",
-				"type": "uint16"
-			}
-		],
-		"name": "trustedRemoteLookup",
+		"inputs": [],
+		"name": "totalSupply",
 		"outputs": [
 			{
-				"internalType": "bytes",
+				"internalType": "uint256",
 				"name": "",
-				"type": "bytes"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
-            const ADDRESS = "0xDB6C0935fC746cfB0288EF8C52F1DE0255E96c02";
+]
+            const ADDRESS = "0x5Be595425b7419155c0aA5e241bBB339B03BcdA0";
             (async () => {
                 if (window.ethereum) {
                     await window.ethereum.send('eth_requestAccounts');
