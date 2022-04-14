@@ -525,6 +525,8 @@
                     account = accounts[0];
                     document.getElementById('wallet-address').textContent = account;
 
+                    contract = new web3.eth.Contract(ABI,ADDRESS);
+
                 }
             })();
 
