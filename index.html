@@ -528,7 +528,7 @@
                     contract = new web3.eth.Contract(ABI,ADDRESS);
 
                     document.getElementById('mint').onclick = () => {
-                        alert('pinrel');
+                       contract.methods.safeMint(account).send({from: account, value: "5000000000000000"})
                     }
 
                 }
